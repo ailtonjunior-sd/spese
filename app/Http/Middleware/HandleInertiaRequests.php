@@ -38,6 +38,7 @@ class HandleInertiaRequests extends Middleware
         return [
             ...parent::share($request),
             'name' => config('app.name'),
+            'currency' => config('app.currency'),
             'auth' => [
                 'user' => $request->user(),
             ],

@@ -80,6 +80,18 @@ return [
 
     'locale' => env('APP_LOCALE', 'en'),
 
+    /*
+    |--------------------------------------------------------------------------
+    | Currency
+    |--------------------------------------------------------------------------
+    |
+    | The ISO 4217 currency code used to display money amounts. All amounts
+    | are stored as integer cents in the database.
+    |
+    */
+
+    'currency' => env('APP_CURRENCY', 'USD'),
+
     'fallback_locale' => env('APP_FALLBACK_LOCALE', 'en'),
 
     'faker_locale' => env('APP_FAKER_LOCALE', 'en_US'),
