@@ -10,6 +10,15 @@ class ProfileUpdateTest extends TestCase
 {
     use RefreshDatabase;
 
+    public function test_settings_redirects_to_the_profile_page()
+    {
+        $user = User::factory()->create();
+
+        $this->actingAs($user)
+            ->get('/settings')
+            ->assertRedirect(route('profile.edit'));
+    }
+
     public function test_profile_page_is_displayed()
     {
         $user = User::factory()->create();
